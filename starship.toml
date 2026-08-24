@@ -1,0 +1,29 @@
+format = """
+$directory$git_branch$git_status
+[╰─❯](fg:#8b0000 bold) """
+
+[directory]
+style = "fg:#ababab bold"
+format = "[╭─](fg:#8b0000 bold)[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = ""
+style = "fg:#6e0000 bold"
+format = "[─](fg:#4a0000)[ $symbol $branch ]($style)"
+
+[git_status]
+style = "fg:#555555"
+format = "[─](fg:#4a0000)[$all_status$ahead_behind]($style) "
+conflicted = "✖"
+modified = "▲"
+untracked = "░"
+staged = "▓"
+ahead = "⇡"
+behind = "⇣"
+deleted = "▀"
+
+[character]
+success_symbol = "[❯](fg:#8b0000 bold)"
+error_symbol = "[❯](fg:#ff0000 bold)"
